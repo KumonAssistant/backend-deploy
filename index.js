@@ -38,7 +38,6 @@ let notes = [
   next()
 })*/
 
-
 app.get('/', (req, res) => {
   res.send('<h1>hello world</h1>')
 })
@@ -85,7 +84,7 @@ app.delete('/api/notes/:id', (req, res) => {
 })
 
 // listen to HTTP requests sent to port 3001
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 })
